@@ -1,7 +1,8 @@
 public class Contact {
 
 	public Contact(String firstName, String lastName, String address, String city, String state, int zip,
-			long phoneNumber, String email) {
+			long phoneNumber, String email) 
+	{
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -72,7 +73,7 @@ public class Contact {
 	}
 	@Override
 	public String toString() {
-		return this.getFirstName() + " " + this.getLastName() + " " + this.getAddress() + " " + this.getPhoneNumber();
+		return this.getFirstName() + " " + this.getLastName() + " " + this.getAddress() + " " + this.getPhoneNumber() + " " + this.getCity();
 	}
 
 }
