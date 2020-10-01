@@ -1,8 +1,7 @@
 public class Contact {
-	
+
 	public Contact(String firstName, String lastName, String address, String city, String state, int zip,
-			long phoneNumber, String email) 
-	{
+			long phoneNumber, String email) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -13,7 +12,7 @@ public class Contact {
 		this.phoneNumber = phoneNumber;
 		this.email = email;
 	}
-	
+
 	private String firstName;
 	private String lastName;
 	private String address;
@@ -22,7 +21,7 @@ public class Contact {
 	private int zip;
 	private long phoneNumber;
 	private String email;
-	
+
 	public String getFirstName() {
 		return firstName;
 	}
