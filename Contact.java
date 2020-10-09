@@ -1,28 +1,28 @@
-public class Contact {
+package com.assignment;
 
-	public Contact(String firstName, String lastName, String address, String city, String state, int zip,
-			long phoneNumber, String email) 
-	{
+public class Contact {
+	String firstName;
+	String lastName;
+	String address;
+	String city;
+	String state;
+	int zip;
+	long phoneNo;
+	String email;
+	public Contact() {
+		
+	}
+	public Contact(String fName, String lName, String add, String city, String state, int zip, long pNo, String email) {
 		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.address = address;
+		this.firstName = fName;
+		this.lastName = lName;
+		this.address = add;
 		this.city = city;
 		this.state = state;
 		this.zip = zip;
-		this.phoneNumber = phoneNumber;
+		this.phoneNo = pNo;
 		this.email = email;
 	}
-
-	private String firstName;
-	private String lastName;
-	private String address;
-	private String city;
-	private String state;
-	private int zip;
-	private long phoneNumber;
-	private String email;
-
 	public String getFirstName() {
 		return firstName;
 	}
@@ -59,11 +59,11 @@ public class Contact {
 	public void setZip(int zip) {
 		this.zip = zip;
 	}
-	public long getPhoneNumber() {
-		return phoneNumber;
+	public long getPhoneNo() {
+		return phoneNo;
 	}
-	public void setPhoneNumber(long phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setPhoneNo(long phoneNo) {
+		this.phoneNo = phoneNo;
 	}
 	public String getEmail() {
 		return email;
@@ -71,9 +71,22 @@ public class Contact {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	@Override
 	public String toString() {
-		return this.getFirstName() + " " + this.getLastName() + " " + this.getAddress() + " " + this.getPhoneNumber() + " " + this.getCity();
+		return "First Name : " + firstName + " Last Name : " + lastName + " Address : " + address + 
+				" City : " + city + " State : " + state + " Zip : " + zip + " Phone Number : " + phoneNo + 
+				" Email : " + email;
 	}
-
+	
+	@Override
+	public boolean equals(Object o) {
+	    boolean result = false;
+	    if(o == this) {
+		return true;
+	    }
+	    Contact c = (Contact)o;
+	    if(c.firstName.equals(this.firstName) && c.lastName.equals(this.lastName)) {
+		result = true;
+	    }
+	    return result;
+	}
 }
